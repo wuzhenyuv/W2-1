@@ -17,7 +17,7 @@ contract Bank {
     }
 
     receive() external payable {
-        transferBlanace[msg.sender] = msg.value;
+        transferBlanace[msg.sender] += msg.value;
     }
 
     function withdraw() public onlyOwner{
